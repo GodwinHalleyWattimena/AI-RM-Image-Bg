@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Remove Image Background
 
-## Getting Started
+Aplikasi web modern untuk menghapus background gambar secara otomatis menggunakan AI. Dibangun dengan [Next.js](https://nextjs.org), Tailwind CSS, dan Framer Motion.
 
-First, run the development server:
+## Fitur Utama
+
+-   **Background Removal**: Hapus background instan dengan presisi tinggi.
+-   **AI Processing**: Integrasi dengan remove.bg API.
+-   **Modern UI**: Antarmuka pengguna yang responsif, bersih, dan interaktif dengan animasi halus.
+-   **Privacy Focused**: Pemrosesan aman dan cepat.
+
+## Persiapan (Getting Started)
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer lokal Anda.
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/GodwinHalleyWattimena/AI-RM-Image-Bg.git
+cd AI-RM-Image-Bg
+```
+
+### 2. Install Dependencies
+
+Pastikan Anda sudah menginstall [Node.js](https://nodejs.org/) (versi 18 atau terbaru direkomendasikan).
+
+```bash
+npm install
+# atau
+yarn install
+# atau
+pnpm install
+```
+
+### 3. Konfigurasi Environment Variables
+
+Aplikasi ini membutuhkan API Key dari remove.bg.
+
+1.  Buat file bernama `.env.local` di root folder proyek.
+2.  Tambahkan konfigurasi berikut ke dalamnya:
+
+```env
+# Dapatkan API Key gratis di https://www.remove.bg/dashboard#api-key
+REMOVE_BG_API_KEY=your_api_key_here
+
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
+
+> **Catatan**: Ganti `your_api_key_here` dengan API Key yang Anda dapatkan dari dashboard remove.bg.
+
+### 4. Jalankan Aplikasi
+
+Jalankan development server:
 
 ```bash
 npm run dev
-# or
+# atay
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) di browser Anda untuk melihat hasilnya.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Teknologi yang Digunakan
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   **Framework**: Next.js 16 (App Router)
+-   **Language**: TypeScript
+-   **Styling**: Tailwind CSS v4
+-   **Icons**: Lucide React
+-   **Animation**: Framer Motion
+-   **File Handling**: React Dropzone
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Cara termudah untuk men-deploy aplikasi ini adalah menggunakan [Vercel](https://vercel.com/new). Pastikan Anda menambahkan Environment Variables (`REMOVE_BG_API_KEY`) di dashboard Vercel saat deployment.
